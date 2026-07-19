@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0F4C3A;
+  --accent: #C59A6C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern" "tnum" "liga" "ss01";
+}
+
+/* Custom scrollbar for timeline */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth transitions for interactive elements */
+button, .cursor-pointer {
+  transition: transform 0.1s cubic-bezier(0.23, 1.0, 0.32, 1), 
+              box-shadow 0.2s cubic-bezier(0.23, 1.0, 0.32, 1),
+              border-color 0.2s cubic-bezier(0.23, 1.0, 0.32, 1);
+}
+
+button:active {
+  transform: scale(0.985);
+}
+
+/* Modal backdrop */
+.fixed {
+  backdrop-filter: blur(4px);
+}
+
+/* Package highlight cards */
+.group:hover {
+  transform: translateY(-1px);
+}
+
+
+
+/* Beautiful section dividers */
+.border-y {
+  border-color: #E5E1D9;
+}
+
+/* Typography polish */
+h1, h2, h3, h4 {
+  font-feature-settings: "tnum";
+}
+
+/* Form inputs */
+input, select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0F4C3A;
+  box-shadow: 0 0 0 3px rgba(15, 76, 58, 0.08);
+}
+
+/* Award badges in the program flow */
+.badge {
+  background: rgba(255,255,255,0.08);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  border-radius: 999px;
+}
+
+/* Mobile responsiveness polish */
+@media (max-width: 768px) {
+  .text-6xl, .text-7xl {
+    font-size: 2.9rem;
+    line-height: 1.05;
+  }
+}
